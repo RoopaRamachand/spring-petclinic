@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Scan') {
       steps {
-        sh 'grype dir:. --scope AllLayers'
+        sh 'grype ${WORKSPACE} --scope AllLayers'
       }
     }
   }
